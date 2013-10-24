@@ -20,7 +20,7 @@ public class Contact implements Parcelable {
 	private String _notes;
 
 	public boolean ignored = false;
-
+	
 	private long ID;
 
 	private Contact(Builder builder) {

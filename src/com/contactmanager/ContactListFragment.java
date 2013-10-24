@@ -105,13 +105,17 @@ public class ContactListFragment extends Fragment {
 			case Activity.RESULT_OK:
 				// ContactDataBaseHandler dbHandler = new
 				// ContactDataBaseHandler(getActivity());
+//				Contact updatedContact = data.getParcelableExtra("updatedContact");
+//				_dbHandler.deleteContact(updatedContact, _tableType);
+//				updatedContact.setId(0);
+//				_dbHandler.addContact(updatedContact, _tableType);
 				setList(_dbHandler.getAllContacts(TableType.ContactList,
 						SortOption.Default));
 
 				break;
 			case Activity.RESULT_CANCELED:
-//				setList(_dbHandler.getAllContacts(_tableType,
-//						SortOption.Default));
+				setList(_dbHandler.getAllContacts(_tableType,
+						SortOption.Default));
 				break;
 			case ContactDetailsActivity._deleteContactResultCode:
 				ContactDataBaseHandler _dbHandler = new ContactDataBaseHandler(

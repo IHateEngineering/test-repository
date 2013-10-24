@@ -254,9 +254,10 @@ public class ContactDataBaseHandler extends SQLiteOpenHelper {
 		values.put(KEY_AGE, contact.getAge());
 		values.put(KEY_GENDER, contact.getGender());
 		values.put(KEY_NOTES, contact.getNotes());
-
-		return db.update(tableName, values, KEY_ID + " = ?",
+		long l = db.update(tableName, values, KEY_ID + " = ?",
 				new String[] { String.valueOf(contact.getId()) });
+		db.close();
+		return l;
 	}
 
 	/**
