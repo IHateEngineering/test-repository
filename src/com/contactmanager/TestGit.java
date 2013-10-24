@@ -2,7 +2,6 @@ package com.contactmanager;
 
 public class TestGit {
 	
-	public void oldcommit(){
-		
+	public static void main(Stringp[] args){
 	}
 }
