@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string-array name="contact_sort_list">
+        <item >First Name</item>
+        <item >Last Name</item>
+        <item >Prefered Name</item>
+        <item >Age</item>
+    </string-array>
+    
+</resources>
