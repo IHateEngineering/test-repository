@@ -278,20 +278,20 @@ public class ContactDetailsActivity extends Activity {
 		try {
 			_selectedContact.setMobileNumber(Integer.parseInt(_mobileNumber
 					.getText().toString()));
-		} catch (Exception e) {
+		} catch (NullPointerException e) {
 		}
 		try {
 			_selectedContact.setHomeNumber(Integer.parseInt(_homeNumber
 					.getText().toString()));
-		} catch (Exception e) {
+		} catch (NullPointerException e) {
 		}
 		try {
 			_selectedContact.setGender(_gender.getText().toString());
-		} catch (Exception e) {
+		} catch (NullPointerException e) {
 		}
 		try {
 			_selectedContact.setDOB(_DOB.getText().toString());
-		} catch (Exception e) {
+		} catch (NullPointerException e) {
 		}
 		try {
 			_selectedContact.setAdress(_adress.getText().toString());
@@ -299,12 +299,12 @@ public class ContactDetailsActivity extends Activity {
 		}
 		try {
 			_selectedContact.setNotes(_notes.getText().toString());
-		} catch (Exception e) {
+		} catch (NullPointerException e) {
 		}
 		try {
 			_selectedContact
 					.setAge(Integer.parseInt(_age.getText().toString()));
-		} catch (Exception e) {
+		} catch (NullPointerException e) {
 		}
 		try {
 			_selectedContact.setEmail(_email.getText().toString());
