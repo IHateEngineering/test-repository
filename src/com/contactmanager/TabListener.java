@@ -43,6 +43,7 @@ public class TabListener<T> implements android.app.ActionBar.TabListener {
 
 	@Override
 	public void onTabReselected(Tab tab, FragmentTransaction ft) {
+		refreshList();
 	}
 
 	@Override
@@ -56,12 +57,18 @@ public class TabListener<T> implements android.app.ActionBar.TabListener {
 		} else {
 			// ft.attach(_fragment);
 			ft.show(_fragment);
-			List<Contact> contacts = _dbHandler.getAllContacts(_tableType,
-					SortOption.Default);
-			_fragment.setList(contacts);
+			refreshList();
 
 		}
-
+	}
+	
+	/**
+	 * syncs the ListView in the fragment with the database.
+	 */
+	private void refreshList(){
+		List<Contact> contacts = _dbHandler.getAllContacts(_tableType,
+				SortOption.Default);
+		_fragment.setList(contacts);
 	}
 
 	@Override

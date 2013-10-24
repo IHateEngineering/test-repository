@@ -314,9 +314,12 @@ public class ContactDetailsActivity extends Activity {
 			_dbHandler.updateContact(_selectedContact, TableType.IgnoreList);
 		} else {
 			_dbHandler.updateContact(_selectedContact, TableType.ContactList);
+//			_dbHandler.deleteContact(_selectedContact, TableType.ContactList);
+//			_dbHandler.addContact(_selectedContact, TableType.ContactList);
 		}
 		Intent returnIntent = new Intent();
 		setResult(RESULT_OK, returnIntent);
+		returnIntent.putExtra("updatedContact", _selectedContact);
 		_dbHandler.close();
 		finish();
 		// }
@@ -335,7 +338,7 @@ public class ContactDetailsActivity extends Activity {
 			editText.setClickable(b);
 			editText.setFocusableInTouchMode(b);
 			// editText.setText("test");
-			Log.d("edit", "in setEditable");
+//			Log.d("edit", "in setEditable");
 		}
 		if (b) {
 			_firstName.setInputType(InputType.TYPE_TEXT_VARIATION_PERSON_NAME);
